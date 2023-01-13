@@ -7,6 +7,8 @@
 
 #endif
 
+#define RAPIDFUZZ_EXCLUDE_SIMD
+
 extern "C" {
 	ADDExport double _cdecl ratio(char* const s1, char* const s2, double score_cut_off);
 	ADDExport double _cdecl token_ratio(char* const s1, char* const s2, double score_cut_off);
