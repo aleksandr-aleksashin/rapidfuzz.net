@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidFuzz.Net", "RapidFuzz.Net\RapidFuzz.Net.csproj", "{E77B6AFC-5F5E-4DD5-B82D-A06FF960DB36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E77B6AFC-5F5E-4DD5-B82D-A06FF960DB36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E77B6AFC-5F5E-4DD5-B82D-A06FF960DB36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E77B6AFC-5F5E-4DD5-B82D-A06FF960DB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E77B6AFC-5F5E-4DD5-B82D-A06FF960DB36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC41E5CE-2E7A-4591-BAB1-4E40D5991FB4}
+	EndGlobalSection
+EndGlobal
