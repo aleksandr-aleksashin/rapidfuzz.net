@@ -1,0 +1,17 @@
+OBJ_DIR := ./obj
+SRC_FILES := $(wildcard ./src/*.cpp)
+SRC_FILES += $(wildcard ./src/windows/*.cpp)
+
+OBJ_FILES := $(SRC_FILES:.cpp=.o)
+
+LDFLAGS := -I../externs/rapidfuzz -fPIC -O3 -std=c++17 -s -shared -Wl,--subsystem,windows
+CPPFLAGS := -I../externs/rapidfuzz  -fPIC -O3 -std=c++17 -s -shared  -Wl,--subsystem,windows
+
+NativeRapidFuzz.dll: $(OBJ_FILES)
+#	echo $(OBJ_FILES)
+	 g++ $(LDFLAGS) -o $@ $^
+
+clean:
+	rm $(OBJ_FILES)
+.o: 
+	g++ $(CPPFLAGS)  -c -o $@ $<
