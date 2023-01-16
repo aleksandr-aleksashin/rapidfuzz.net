@@ -27,6 +27,7 @@
 		https://github.com/aleksandr-aleksashin/rapidfuzz.net
 		</RepositoryUrl>
 		<NeutralLanguage>en-US</NeutralLanguage>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<RuntimeIdentifiers>win-x64;linux-x64;linux-musl-x64</RuntimeIdentifiers>
 	</PropertyGroup>
 
