@@ -17,4 +17,7 @@ extern "C" {
 	ADDExport double _cdecl partial_token_ratio(char* const s1, char* const s2, double score_cut_off);
 	ADDExport double _cdecl partial_token_set_ratio(char* const s1, char* const s2, double score_cut_off);
 	ADDExport double _cdecl partial_token_sort_ratio(char* const s1, char* const s2, double score_cut_off);
+	ADDExport double _cdecl token_sort_ratio(char* const s1, char* const s2, double score_cut_off);
+	ADDExport double _cdecl w_ratio(char* const s1, char* const s2, double score_cut_off);
+	ADDExport double _cdecl q_ratio(char* const s1, char* const s2, double score_cut_off);
 }

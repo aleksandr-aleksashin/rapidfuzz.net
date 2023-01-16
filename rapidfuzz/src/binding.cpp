@@ -30,4 +30,13 @@ extern "C" {
 	ADDExport double _cdecl partial_token_sort_ratio(char* const s1, char* const s2, double score_cut_off){
 		return rapidfuzz::fuzz::partial_token_sort_ratio(s1, s2, score_cut_off);
 	}
+	ADDExport double _cdecl token_sort_ratio(char* const s1, char* const s2, double score_cut_off){
+		return rapidfuzz::fuzz::token_sort_ratio(s1, s2, score_cut_off);
+	}
+	ADDExport double _cdecl w_ratio(char* const s1, char* const s2, double score_cut_off){
+		return rapidfuzz::fuzz::WRatio(s1, s2, score_cut_off);
+	}
+	ADDExport double _cdecl q_ratio(char* const s1, char* const s2, double score_cut_off){
+		return rapidfuzz::fuzz::QRatio(s1, s2, score_cut_off);
+	}
 }
