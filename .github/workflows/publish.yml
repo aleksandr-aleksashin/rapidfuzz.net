@@ -2,7 +2,7 @@ name: CI
 
 on:
   create:
-    branches: 
+    tags: 
       - release/**
   push:
     branches:
