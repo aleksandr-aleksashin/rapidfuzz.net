@@ -1,12 +1,11 @@
 name: CI
 
 on:
-  create:
-    tags: 
-      - release/**
   push:
     branches:
     - main
+    tags: 
+    - release/**
   pull_request:
     branches:
     - main
