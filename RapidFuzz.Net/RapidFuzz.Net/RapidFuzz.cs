@@ -29,11 +29,11 @@ public static class RapidFuzz
                 preprocessed = preprocessor(preprocessed);
             }
 
-            var score = 0;
+            var score = scorer(preprocessedText, preprocessed, scoreCutOff);
 
             if (score > scoreCutOff)
             {
-                yield return (scorer(preprocessedText, preprocessed, scoreCutOff), index, value);
+                yield return (score, index, value);
             }
         }
     }
