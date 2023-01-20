@@ -20,16 +20,16 @@ namespace RapidFuzz.Net.UnitTests
 
         private static List<Metric> Metrics = new List<Metric>()
         {
-            new(RapidFuzz.Ratio, true),
-            new(RapidFuzz.PartialRatio, false),
-            new(RapidFuzz.TokenSetRatio, true),
-            new(RapidFuzz.TokenSortRatio, true),
-            new(RapidFuzz.TokenRatio, true),
-            new(RapidFuzz.PartialTokenSetRatio, false),
-            new(RapidFuzz.PartialTokenSortRatio, false),
-            new(RapidFuzz.PartialTokenRatio, false),
-            new(RapidFuzz.WRatio, false),
-            new(RapidFuzz.QRatio, true)
+            new(FuzzyMatcher.Ratio, true),
+            new(FuzzyMatcher.PartialRatio, false),
+            new(FuzzyMatcher.TokenSetRatio, true),
+            new(FuzzyMatcher.TokenSortRatio, true),
+            new(FuzzyMatcher.TokenRatio, true),
+            new(FuzzyMatcher.PartialTokenSetRatio, false),
+            new(FuzzyMatcher.PartialTokenSortRatio, false),
+            new(FuzzyMatcher.PartialTokenRatio, false),
+            new(FuzzyMatcher.WRatio, false),
+            new(FuzzyMatcher.QRatio, true)
         };
         const string s1 = "new york mets";
         const string s2 = "new YORK mets";
@@ -47,75 +47,75 @@ namespace RapidFuzz.Net.UnitTests
         [Fact]
         public void Equal()
         {
-            Assert.Equal(100, RapidFuzz.Ratio(s1, s1));
-            Assert.Equal(100, RapidFuzz.Ratio("test", "test"));
-            Assert.Equal(100, RapidFuzz.Ratio(s8, s8));
-            Assert.Equal(100, RapidFuzz.Ratio(s9, s9));
+            Assert.Equal(100, FuzzyMatcher.Ratio(s1, s1));
+            Assert.Equal(100, FuzzyMatcher.Ratio("test", "test"));
+            Assert.Equal(100, FuzzyMatcher.Ratio(s8, s8));
+            Assert.Equal(100, FuzzyMatcher.Ratio(s9, s9));
         }
 
         [Fact]
         public void PartialRatio()
         {
-            Assert.Equal(100, RapidFuzz.PartialRatio(s1, s1));
-            Assert.Equal(65, RapidFuzz.Ratio(s1, s3));
-            Assert.Equal(100, RapidFuzz.PartialRatio(s1, s3));
+            Assert.Equal(100, FuzzyMatcher.PartialRatio(s1, s1));
+            Assert.Equal(65, FuzzyMatcher.Ratio(s1, s3));
+            Assert.Equal(100, FuzzyMatcher.PartialRatio(s1, s3));
         }
 
         [Fact]
         public void TokenSortRatio()
         {
-            Assert.Equal(100, RapidFuzz.TokenSortRatio(s1, s1));
-            Assert.Equal(100, RapidFuzz.TokenSortRatio("metss new york hello", "metss new york hello"));
+            Assert.Equal(100, FuzzyMatcher.TokenSortRatio(s1, s1));
+            Assert.Equal(100, FuzzyMatcher.TokenSortRatio("metss new york hello", "metss new york hello"));
         }
 
         [Fact]
         public void TokenSetRatio()
         {
-            Assert.Equal(100, RapidFuzz.TokenSetRatio(s4, s5));
-            Assert.Equal(100, RapidFuzz.TokenSetRatio(s8, s8));
-            Assert.Equal(100, RapidFuzz.TokenSetRatio(s9, s9));
-            Assert.Equal(50, RapidFuzz.TokenSetRatio(s10, s10a));
+            Assert.Equal(100, FuzzyMatcher.TokenSetRatio(s4, s5));
+            Assert.Equal(100, FuzzyMatcher.TokenSetRatio(s8, s8));
+            Assert.Equal(100, FuzzyMatcher.TokenSetRatio(s9, s9));
+            Assert.Equal(50, FuzzyMatcher.TokenSetRatio(s10, s10a));
         }
 
         [Fact]
         public void PartialTokenSetRatio()
         {
-            Assert.Equal(100, RapidFuzz.PartialTokenSetRatio(s4, s7));
+            Assert.Equal(100, FuzzyMatcher.PartialTokenSetRatio(s4, s7));
         }
 
         [Fact]
         public void WRatioEqual()
         {
-            Assert.Equal(100, RapidFuzz.WRatio(s1, s1));
+            Assert.Equal(100, FuzzyMatcher.WRatio(s1, s1));
         }
 
         [Fact]
         public void WRatioPartialMatch()
         {
             // a partial match is scaled by .9
-            Assert.Equal(90, RapidFuzz.WRatio(s1, s3));
+            Assert.Equal(90, FuzzyMatcher.WRatio(s1, s3));
         }
 
         [Fact]
         public void WRatioMisorderedMatch()
         {
             // misordered full matches are scaled by .95
-            Assert.Equal(95, RapidFuzz.WRatio(s4, s5));
+            Assert.Equal(95, FuzzyMatcher.WRatio(s4, s5));
         }
 
         [Fact]
         public void TwoEmptyStrings()
         {
-            Assert.Equal(100, RapidFuzz.Ratio("", ""));
-            Assert.Equal(100, RapidFuzz.PartialRatio("", ""));
-            Assert.Equal(100, RapidFuzz.TokenSortRatio("", ""));
-            Assert.Equal(0, RapidFuzz.TokenSetRatio("", ""));
-            Assert.Equal(100, RapidFuzz.PartialTokenSortRatio("", ""));
-            Assert.Equal(0, RapidFuzz.PartialTokenSetRatio("", ""));
-            Assert.Equal(100, RapidFuzz.TokenRatio("", ""));
-            Assert.Equal(100, RapidFuzz.PartialTokenRatio("", ""));
-            Assert.Equal(0, RapidFuzz.WRatio("", ""));
-            Assert.Equal(0, RapidFuzz.QRatio("", ""));
+            Assert.Equal(100, FuzzyMatcher.Ratio("", ""));
+            Assert.Equal(100, FuzzyMatcher.PartialRatio("", ""));
+            Assert.Equal(100, FuzzyMatcher.TokenSortRatio("", ""));
+            Assert.Equal(0, FuzzyMatcher.TokenSetRatio("", ""));
+            Assert.Equal(100, FuzzyMatcher.PartialTokenSortRatio("", ""));
+            Assert.Equal(0, FuzzyMatcher.PartialTokenSetRatio("", ""));
+            Assert.Equal(100, FuzzyMatcher.TokenRatio("", ""));
+            Assert.Equal(100, FuzzyMatcher.PartialTokenRatio("", ""));
+            Assert.Equal(0, FuzzyMatcher.WRatio("", ""));
+            Assert.Equal(0, FuzzyMatcher.QRatio("", ""));
         }
 
         [Fact]
@@ -149,8 +149,8 @@ namespace RapidFuzz.Net.UnitTests
         [Fact]
         public void PartialRatioShortNeedle()
         {
-            Assert.Equal(33.3333333, RapidFuzz.PartialRatio("001", "220222"), 1e-7);
-            Assert.Equal(100, RapidFuzz.PartialRatio("physics 2 vid", "study physics physics 2 video"));
+            Assert.Equal(33.3333333, FuzzyMatcher.PartialRatio("001", "220222"), 1e-7);
+            Assert.Equal(100, FuzzyMatcher.PartialRatio("physics 2 vid", "study physics physics 2 video"));
         }
 
         [Fact]
@@ -187,8 +187,8 @@ namespace RapidFuzz.Net.UnitTests
             var str1 = "aaaaaaaaaaaaaaaaaaaaaaaabacaaaaaaaabaaabaaaaaaaababbbbbbbbbbabbcb";
             var str2 = "aaaaaaaaaaaaaaaaaaaaaaaababaaaaaaaabaaabaaaaaaaababbbbbbbbbbabbcb";
 
-            Assert.Equal(98.4615385, RapidFuzz.PartialRatio(str1, str2), 1e-7);
-            Assert.Equal(98.4615385, RapidFuzz.PartialRatio(str2, str1), 1e-7);
+            Assert.Equal(98.4615385, FuzzyMatcher.PartialRatio(str1, str2), 1e-7);
+            Assert.Equal(98.4615385, FuzzyMatcher.PartialRatio(str2, str1), 1e-7);
         }
 
         [Fact]
@@ -234,10 +234,10 @@ namespace RapidFuzz.Net.UnitTests
                 "CAGAGAGTTAAGATCTAGTACACTGGGTTTCCTAAATGTAAAAATTGGCCCGAATCCGGCCTAATATGCGAACTTTGTGCTACCAAGCGAGCGGGA" +
                 "AGCTAAGGGTGGGGAGTGCGGGTTTAATGGACCATCTCGCAGGTCTAGCAGTTAATGTATCCTATCTTCCAAACAG";
 
-            Assert.Equal(97.5274725, RapidFuzz.PartialRatio(str1, str2), 1e-7);
-            Assert.Equal(97.5274725, RapidFuzz.PartialRatio(str2, str1), 1e-7);
-            Assert.Equal(97.5274725, RapidFuzz.PartialRatio(str1, str2, 97.5), 1e-7);
-            Assert.Equal(97.5274725, RapidFuzz.PartialRatio(str2, str1, 97.5), 1e-7);
+            Assert.Equal(97.5274725, FuzzyMatcher.PartialRatio(str1, str2), 1e-7);
+            Assert.Equal(97.5274725, FuzzyMatcher.PartialRatio(str2, str1), 1e-7);
+            Assert.Equal(97.5274725, FuzzyMatcher.PartialRatio(str1, str2, 97.5), 1e-7);
+            Assert.Equal(97.5274725, FuzzyMatcher.PartialRatio(str2, str1, 97.5), 1e-7);
         }
     }
 }

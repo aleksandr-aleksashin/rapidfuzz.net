@@ -4,7 +4,7 @@ using RapidFuzz.Net.Interop;
 
 namespace RapidFuzz.Net;
 
-public static class RapidFuzz
+public static class FuzzyMatcher
 {
     public static IEnumerable<(double Score, int Index, string Value)> Extract(string text,
                                                                                IEnumerable<string> values,
