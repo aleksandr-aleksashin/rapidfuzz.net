@@ -5,7 +5,14 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidFuzz.Net", "RapidFuzz.Net\RapidFuzz.Net.csproj", "{E77B6AFC-5F5E-4DD5-B82D-A06FF960DB36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidFuzz.Net.UnitTests", "RapidFuzz.Net.UnitTests\RapidFuzz.Net.UnitTests.csproj", "{370DD2EF-C780-4C84-AE4B-602D4BA9C7AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidFuzz.Net.UnitTests", "RapidFuzz.Net.UnitTests\RapidFuzz.Net.UnitTests.csproj", "{370DD2EF-C780-4C84-AE4B-602D4BA9C7AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7170AEB0-BA3F-43DA-8A38-D88A8BDF580A}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.ruleset = .ruleset
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

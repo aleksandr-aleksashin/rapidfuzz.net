@@ -20,7 +20,7 @@
 		<PublishRepositoryUrl>true</PublishRepositoryUrl> 
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<CodeAnalysisRuleset>..\..\.ruleset</CodeAnalysisRuleset>
+		<CodeAnalysisRuleset>..\.ruleset</CodeAnalysisRuleset>
 		<PackageTags>rappidfuzz;fuzzymatching;</PackageTags>
 		<PackageProjectUrl>https://github.com/aleksandr-aleksashin/rapidfuzz.net</PackageProjectUrl>
 		<RepositoryUrl>
