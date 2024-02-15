@@ -132,53 +132,53 @@ internal static class RapidFuzzInterop
     #region library calls
 
     [DllImport(_lib, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
-    private static extern unsafe double token_ratio([MarshalAs(UnmanagedType.LPTStr)] string s1,
-                                                    [MarshalAs(UnmanagedType.LPTStr)] string s2,
+    private static extern unsafe double token_ratio([MarshalAs(UnmanagedType.LPWStr)] string s1,
+                                                    [MarshalAs(UnmanagedType.LPWStr)] string s2,
                                                     double score_cut_off);
 
     [DllImport(_lib, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
-    private static extern unsafe double partial_ratio([MarshalAs(UnmanagedType.LPTStr)] string s1,
-                                                      [MarshalAs(UnmanagedType.LPTStr)] string s2,
+    private static extern unsafe double partial_ratio([MarshalAs(UnmanagedType.LPWStr)] string s1,
+                                                      [MarshalAs(UnmanagedType.LPWStr)] string s2,
                                                       double score_cut_off);
 
     [DllImport(_lib, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
-    private static extern unsafe double token_set_ratio([MarshalAs(UnmanagedType.LPTStr)] string s1,
-                                                        [MarshalAs(UnmanagedType.LPTStr)] string s2,
+    private static extern unsafe double token_set_ratio([MarshalAs(UnmanagedType.LPWStr)] string s1,
+                                                        [MarshalAs(UnmanagedType.LPWStr)] string s2,
                                                         double score_cut_off);
 
     [DllImport(_lib, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
-    private static extern unsafe double partial_token_ratio([MarshalAs(UnmanagedType.LPTStr)] string s1,
-                                                            [MarshalAs(UnmanagedType.LPTStr)] string s2,
+    private static extern unsafe double partial_token_ratio([MarshalAs(UnmanagedType.LPWStr)] string s1,
+                                                            [MarshalAs(UnmanagedType.LPWStr)] string s2,
                                                             double score_cut_off);
 
     [DllImport(_lib, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
-    private static extern unsafe double partial_token_set_ratio([MarshalAs(UnmanagedType.LPTStr)] string s1,
-                                                                [MarshalAs(UnmanagedType.LPTStr)] string s2,
+    private static extern unsafe double partial_token_set_ratio([MarshalAs(UnmanagedType.LPWStr)] string s1,
+                                                                [MarshalAs(UnmanagedType.LPWStr)] string s2,
                                                                 double score_cut_off);
 
     [DllImport(_lib, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
-    private static extern unsafe double partial_token_sort_ratio([MarshalAs(UnmanagedType.LPTStr)] string s1,
-                                                                 [MarshalAs(UnmanagedType.LPTStr)] string s2,
+    private static extern unsafe double partial_token_sort_ratio([MarshalAs(UnmanagedType.LPWStr)] string s1,
+                                                                 [MarshalAs(UnmanagedType.LPWStr)] string s2,
                                                                  double score_cut_off);
 
     [DllImport(_lib, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
-    private static extern unsafe double ratio([MarshalAs(UnmanagedType.LPTStr)] string s1,
-                                              [MarshalAs(UnmanagedType.LPTStr)] string s2,
+    private static extern unsafe double ratio([MarshalAs(UnmanagedType.LPWStr)] string s1,
+                                              [MarshalAs(UnmanagedType.LPWStr)] string s2,
                                               double score_cut_off);
 
     [DllImport(_lib, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
-    private static extern unsafe double token_sort_ratio([MarshalAs(UnmanagedType.LPTStr)] string s1,
-                                                         [MarshalAs(UnmanagedType.LPTStr)] string s2,
+    private static extern unsafe double token_sort_ratio([MarshalAs(UnmanagedType.LPWStr)] string s1,
+                                                         [MarshalAs(UnmanagedType.LPWStr)] string s2,
                                                          double score_cut_off);
 
     [DllImport(_lib, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
-    private static extern unsafe double w_ratio([MarshalAs(UnmanagedType.LPTStr)] string s1,
-                                                [MarshalAs(UnmanagedType.LPTStr)] string s2,
+    private static extern unsafe double w_ratio([MarshalAs(UnmanagedType.LPWStr)] string s1,
+                                                [MarshalAs(UnmanagedType.LPWStr)] string s2,
                                                 double score_cut_off);
 
     [DllImport(_lib, CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
-    private static extern unsafe double q_ratio([MarshalAs(UnmanagedType.LPTStr)] string s1,
-                                                [MarshalAs(UnmanagedType.LPTStr)] string s2,
+    private static extern unsafe double q_ratio([MarshalAs(UnmanagedType.LPWStr)] string s1,
+                                                [MarshalAs(UnmanagedType.LPWStr)] string s2,
                                                 double score_cut_off);
 
     #endregion
