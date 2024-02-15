@@ -31,7 +31,7 @@ public static class FuzzyMatcher
 
             var score = scorer(preprocessedText, preprocessed, scoreCutOff);
 
-            if (score > scoreCutOff)
+            if (score >= scoreCutOff)
             {
                 yield return (score, index, value);
             }

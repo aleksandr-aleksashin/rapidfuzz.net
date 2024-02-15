@@ -1,4 +1,4 @@
-using RapidFuzz.Net.Delegates;
+﻿using RapidFuzz.Net.Delegates;
 using Xunit;
 
 namespace RapidFuzz.Net.UnitTests
@@ -43,6 +43,14 @@ namespace RapidFuzz.Net.UnitTests
         const string s9 = "{a";
         const string s10 = "a{";
         const string s10a = "{b";
+
+        [Fact]
+        public void UnicodeCharacter()
+        {
+            Assert.Equal(0, FuzzyMatcher.Ratio("Иван", "Пётр"));
+            Assert.Equal(94.736842105263165, FuzzyMatcher.Ratio("مساء الخير", "ساء الخير"));
+            Assert.Equal(50, FuzzyMatcher.Ratio("ёж", "еж"));
+        }
 
         [Fact]
         public void Equal()
