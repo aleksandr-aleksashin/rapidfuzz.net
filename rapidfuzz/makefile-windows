@@ -4,8 +4,8 @@ SRC_FILES += $(wildcard ./src/windows/*.cpp)
 
 OBJ_FILES := $(SRC_FILES:.cpp=.o)
 
-LDFLAGS := -I../externs/rapidfuzz -fPIC -O3 -std=c++17 -s -shared -Wl,--subsystem,windows -static -static-libgcc -static-libstdc++ -lwinpthread 
-CPPFLAGS := -I../externs/rapidfuzz  -fPIC -O3 -std=c++17 -s -shared  -Wl,--subsystem,windows -static -static-libgcc -static-libstdc++ -lwinpthread 
+LDFLAGS := -I../externs/rapidfuzz -fPIC -O3 -std=c++17 -fshort-wchar -s -shared -Wl,--subsystem,windows -static -static-libgcc -static-libstdc++ -lwinpthread 
+CPPFLAGS := -I../externs/rapidfuzz  -fPIC -O3 -std=c++17 -fshort-wchar -s -shared  -Wl,--subsystem,windows -static -static-libgcc -static-libstdc++ -lwinpthread 
 
 NativeRapidFuzz.dll: $(OBJ_FILES)
 #	echo $(OBJ_FILES)

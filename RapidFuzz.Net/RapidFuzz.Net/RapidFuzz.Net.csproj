@@ -5,7 +5,7 @@
 		<TargetFrameworks Condition="'$(LibraryFrameworks)'==''">net7.0;net6.0;net5.0;netstandard2.0;netstandard2.1</TargetFrameworks>
 		<TargetFrameworks Condition="'$(LibraryFrameworks)'!=''">$(LibraryFrameworks)</TargetFrameworks>
 		<Nullable>enable</Nullable>
-		<Version>1.2.0</Version>
+		<Version>1.2.1</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<RootNamespace>RapidFuzz.Net</RootNamespace>
 		<PackageId>RapidFuzz.Net</PackageId>

@@ -16,6 +16,6 @@ RUN make
 # docker cp rapidfuzz-csharp-latest-arm64:/home/app/rapidfuzz/NativeRapidFuzz.so ./RapidFuzz.Net/RapidFuzz.Net/lib/linux-arm64/ 
 
 # linux-x64
-# docker build -t rapidfuzz-csharp:x64-latest  --build-arg BASEIMAGE="amd64/ubuntu:22.04" -f ./build/linux.Dockerfile .
+# docker build -t rapidfuzz-csharp:x64-latest  --build-arg BASEIMAGE="amd64/ubuntu:18.04" -f ./build/linux.Dockerfile .
 # docker create --name rapidfuzz-csharp-latest-x64 rapidfuzz-csharp:x64-latest
 # docker cp rapidfuzz-csharp-latest-x64:/home/app/rapidfuzz/NativeRapidFuzz.so ./RapidFuzz.Net/RapidFuzz.Net/lib/linux-x64/ 

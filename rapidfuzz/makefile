@@ -3,8 +3,8 @@ SRC_FILES := $(wildcard ./src/*.cpp)
 
 OBJ_FILES := $(SRC_FILES:.cpp=.o)
 
-LDFLAGS := -I../externs/rapidfuzz -fPIC -O3 -std=c++17 -shared -ldl -fshort-wchar
-CPPFLAGS := -I../externs/rapidfuzz -fPIC -O3 -std=c++17 -shared -ldl -fshort-wchar
+LDFLAGS := -I../externs/rapidfuzz -fPIC -O3 -std=c++17 -shared -ldl -fshort-wchar -static-libgcc -static-libstdc++
+CPPFLAGS := -I../externs/rapidfuzz -fPIC -O3 -std=c++17 -shared -ldl -fshort-wchar -static-libgcc -static-libstdc++
 
 NativeRapidFuzz.so: $(OBJ_FILES)
 #	echo $(OBJ_FILES)
